@@ -77,10 +77,10 @@ export default function Home(){
 		const measurevh = window.$('#measure-vh')
 		const h4carousel = ( measurevh.height() - ( hmenu + sectioncontainer_sec.outerHeight() ) );
 		
-		const section_samples1 = window.$('#section_samples1')
+		const section_samples1_container = window.$('#section_samples1_container')
 		const sample_img0 = window.$('#sample_img0')
 		const sample_img1 = window.$('#sample_img1')
-		section_samples1.height(h4carousel)
+		section_samples1_container.height(h4carousel)
 		
 		const cont_0 = window.$("#cont_0");
 		const cont_0_h_init = cont_0.outerHeight();
@@ -125,53 +125,7 @@ return (
 			<div id="measure-vh" style={{ position: "fixed", height: "100vh" }}></div>
 		</div>
 		
-		<div className='' id="section_samples1">
 		
-			<Carousel responsive={responsive}
-				ssr={true}
-				infinite={true}
-				autoPlay={true}
-				autoPlaySpeed={2500}
-				//customTransition="all .5"
-				//transitionDuration={500}
-				removeArrowOnDeviceType={["tablet", "mobile"]}
-				containerClass="h-100"
-				sliderClass="h-100"
-				itemClass=""
-				//dotListClass="custom-dot-list-style"
-			>
-				<div className="position-relative h-100">
-					<div className="w-100 h-100">
-						<img id="sample_img0" src={import.meta.env.BASE_URL+'/samples/tu_sample2.png'} className="img-fluid w-100 h-100" alt="Introduction"/>
-					</div>
-				</div>
-				
-				<div className="position-relative h-100">
-					<div className="w-100 h-100">
-						<img id="sample_img1" src={import.meta.env.BASE_URL+'/samples/tu_sample1.png'} className="img-fluid w-100 h-100" alt="Introduction"/>
-					</div>
-				</div>
-				
-				<div className="position-relative h-100">
-					<div className="w-100 h-100">
-						<img src={import.meta.env.BASE_URL+'/samples/cinemark_sample1.png'} className="img-fluid w-100 h-100" alt="Introduction"/>
-					</div>
-				</div>
-				
-				<div className="position-relative h-100">
-					<div className="w-100 h-100">
-						<img src={import.meta.env.BASE_URL+'/samples/cinemark_sample2.jpg'} className="img-fluid w-100 h-100" alt="Introduction"/>
-					</div>
-				</div>
-				
-				<div className="position-relative h-100">
-					<div className="w-100 h-100">
-						<img src={import.meta.env.BASE_URL+'/samples/streaming_api_sample2.png'} className="img-fluid w-100 h-100" alt="Introduction"/>
-					</div>
-				</div>
-				
-			</Carousel>
-		</div>
 		
 		<div className='d-flex flex-row justify-content-center my-2 py-2 ' id="section_aboutme">
 			<div className='d-flex flex-column justify-content-center py-2 w-100 mobileDNone' >
@@ -208,6 +162,71 @@ return (
 					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Linux</strong> </h1>
 				</div>
 			</div>
+		</div>
+		
+		<div className='d-flex flex-column my-2 py-2' id="section_samples1">
+			<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Projects:</strong> </h1>
+			<div className='' id="section_samples1_container">
+			
+				<Carousel responsive={responsive}
+					ssr={true}
+					infinite={true}
+					autoPlay={false}
+					autoPlaySpeed={2500}
+					//customTransition="all .5"
+					//transitionDuration={500}
+					removeArrowOnDeviceType={["tablet", "mobile"]}
+					containerClass="h-100"
+					sliderClass="h-100"
+					itemClass=""
+					//dotListClass="custom-dot-list-style"
+				>
+					<div className="position-relative h-100">
+						<div className="w-100 h-100">
+							<img id="sample_img0" src={import.meta.env.BASE_URL+'/samples/tu_sample2.png'} className="img-fluid w-100 h-100" alt="Introduction"/>
+						</div>
+						
+						<div className="position-absolute topleft0 h-100 w-100 noselect" >
+							<div className="d-flex flex-column justify-content-center h-100 w-100 mobileDNone">
+								<div className="d-flex w-100 mt-auto" style={{ backgroundColor:"rgba(0, 0, 0, 0.55)" }}>
+									<div className="d-flex mt-auto ml-auto p-2"
+									onClick={ () => {
+										
+									}}>
+										<i className="d-flex bi bi-info-circle mx-auto my-auto p-2" aria-hidden="true" style={{ color:"#fff",fontSize: "3rem" }}></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div className="position-relative h-100">
+						<div className="w-100 h-100">
+							<img id="sample_img1" src={import.meta.env.BASE_URL+'/samples/tu_sample1.png'} className="img-fluid w-100 h-100" alt="Introduction"/>
+						</div>
+					</div>
+					
+					<div className="position-relative h-100">
+						<div className="w-100 h-100">
+							<img src={import.meta.env.BASE_URL+'/samples/cinemark_sample1.png'} className="img-fluid w-100 h-100" alt="Introduction"/>
+						</div>
+					</div>
+					
+					<div className="position-relative h-100">
+						<div className="w-100 h-100">
+							<img src={import.meta.env.BASE_URL+'/samples/cinemark_sample2.jpg'} className="img-fluid w-100 h-100" alt="Introduction"/>
+						</div>
+					</div>
+					
+					<div className="position-relative h-100">
+						<div className="w-100 h-100">
+							<img src={import.meta.env.BASE_URL+'/samples/streaming_api_sample2.png'} className="img-fluid w-100 h-100" alt="Introduction"/>
+						</div>
+					</div>
+					
+				</Carousel>
+			</div>
+		
 		</div>
 		
 		<div className='' id="section_samples2">

@@ -57,10 +57,12 @@ const Menu = () => {
 			}
 		});
 		
-		const sectioncontainer = window.$("#sectioncontainer");
+		//const sectioncontainer = window.$("#sectioncontainer");
+		const MenuButs = window.$("#MenuButs");
+		
 		
 		let maxWidth = 0;
-		const buts = sectioncontainer.find(".btn");
+		const buts = MenuButs.find(".btn");
 		buts.each(function(index, element) {
 			let curWidth = window.$(element).outerWidth();
 			if (maxWidth < curWidth ) {
@@ -80,9 +82,9 @@ const Menu = () => {
 					<h1 className=""> <strong className="textColor2 noselect fontSize1 ">Agustin Caliva - AgCaliva</strong> </h1>
 				</div>
 				<div className="d-flex justify-content-end align-items-center w-100">
-					<div id="menuBut" name="menuEl" type="button" className="btn btn-1" aria-label="Open Menu" onClick={clickMenuBut}>
+					<button id="menuBut" name="menuEl" type="button" className="btn btn-1" aria-label="Open Menu" onClick={clickMenuBut}>
 						<i name="menuEl" className="d-flex bi bi-list fontSicon1 textColor2 m-auto" aria-hidden="true"></i>
-					</div>
+					</button>
 					<div className="" style={{ width: "7%" }}></div>
 				</div>
 			</div>

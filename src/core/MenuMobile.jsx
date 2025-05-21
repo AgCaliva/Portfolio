@@ -56,20 +56,6 @@ const MenuMobile = () => {
 				closeMenu()
 			}
 		});
-		
-		const sectioncontainer = window.$("#sectioncontainer");
-		
-		let maxWidth = 0;
-		const buts = sectioncontainer.find(".btn");
-		buts.each(function(index, element) {
-			let curWidth = window.$(element).outerWidth();
-			if (maxWidth < curWidth ) {
-				maxWidth = curWidth;
-			}
-		});
-		buts.each(function(index, element) {
-			window.$(element).outerWidth(maxWidth);
-		});
 	}, [])
   
   return (<div id="Menu" className="" >
@@ -78,9 +64,9 @@ const MenuMobile = () => {
 				Agustin Caliva - AgCaliva
 			</h1>
 			<div className="d-flex justify-content-center align-items-center w-100">
-				<div id="menuBut" name="menuEl" type="button" className="btn btn-1" aria-label="Open Menu" onClick={clickMenuBut}>
-					<i name="menuEl" className="bi bi-list fontSicon1 textColor2" aria-hidden="true"></i>
-				</div>
+				<button id="menuBut" name="menuEl" type="button" className="btn btn-1 w-100" aria-label="Open Menu" onClick={clickMenuBut}>
+					<i name="menuEl" className="d-flex justify-content-center bi bi-list fontSicon1 textColor2 " aria-hidden="true"></i>
+				</button>
 			</div>
 		</div>
 		<div className="w-100 d-flex flex-column justify-content-center position-absolute" style={{ width: "100vw" }}>
