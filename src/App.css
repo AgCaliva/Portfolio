@@ -1,0 +1,349 @@
+:root{
+  --grayblue_color: rgba(44, 47, 113, 1);
+  --blue_color: rgba(22, 25, 113, 1);
+  --violet_color: rgba(55, 40, 109, 1);
+  
+  --color_red1: #ff0000;
+  --color_green1: #00ff00;
+  --color_black: #000000;
+  --transparent: rgba( 255,255,255,0 );
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+}
+/*
+rgba(50, 196, 120, 0.75)
+Modificando Bootstrap:*/
+h1{
+  margin-top:0px !important;
+  margin-bottom:0px !important;
+}
+
+h2{
+  margin-top:0px !important;
+  margin-bottom:0px !important;
+}
+
+.btn-1{
+  color: rgba(255,255,255,1) !important;
+  background-color: rgb(0,0,0) !important;
+  border-color: rgba(255,255,255,1) !important;
+}
+.btn-1:hover{
+  color: rgba(255,255,255,1) !important;
+  background-color: rgb(0,0,0) !important;
+}
+.btn-1:focus{
+  color: rgba(255,255,255,1) !important;
+  background-color: rgb(0,0,0) !important;
+  border-color: rgba(255,255,255,1) !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+
+.btn-empty{
+  background-color: transparent !important;
+}
+.btn-empty:hover{
+  background-color: transparent !important;
+}
+.btn-empty:focus{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.dot-color{
+	color: rgba(50, 196, 120, 1) !important;
+}
+
+
+.mypy-3{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.sectioncontainer-animate-up{
+	height: 0px;	
+}
+
+.close {
+    color: #fff; 
+    opacity: 1;
+}
+
+.opacityon{
+	opacity: 1;
+}
+
+.modal-header {
+    border-bottom: 0 none;
+}
+.modal-footer {
+    border-top: 0 none;
+}
+/*Modificando Bootstrap:*/
+* {
+  color: #000
+}
+
+.no-show-focus{
+	outline: none;
+}
+
+.myh-50{
+	height: 50vh;
+}
+
+.myh-25{
+	height: 25vh;
+}
+
+.myh-35{
+	height: 35vh;
+}
+
+.mysticky{
+	position:sticky;
+}
+
+/*
+.img-res-h2 {
+	max-height: 44vh; 
+}
+*/
+
+.img-wap-h {
+	max-height: 15vh; 
+}
+
+/*FontSize*/
+
+
+
+.btn-metamask{
+	color: rgb(255, 255, 255) !important;
+	background-color: rgb(44, 47, 54) !important;
+	border: 1px solid rgb(64, 68, 79) !important;
+	border-radius: 12px !important;
+	padding: 1rem;
+}
+
+.btn-metamask:hover{
+	border-color: rgb(20,194,90) !important;
+	background-color: rgb(44, 47, 54) !important;
+	text-decoration: underline rgb(20,194,90);
+}
+.btn-metamask:focus{
+	border-color: rgb(20,194,90) !important;
+	background-color: rgb(44, 47, 54) !important;
+	box-shadow: 0 0 0 1px rgb(20,194,90) !important;
+}
+
+
+
+.metamask-i{
+	height: 24px;
+	width: 24px;
+}
+
+/*connect to metamask links:*/
+.a-green{
+	color: rgb(20,194,90);
+}
+
+.a-green:hover{
+	color: rgb(20,194,90);
+	text-decoration: underline rgb(20,194,90);
+}
+
+.a-green:focus{
+	color: rgb(20,194,90);
+	text-decoration: underline rgb(20,194,90);
+}
+/*connect to metamask links:*/
+.text-green{
+	color: rgb(20,194,90);
+}
+
+.one-color{
+	color: #00aee9;
+}
+
+
+
+.content-font-color{
+	color: pink;
+}
+/*FontSize*/
+.fontSize2{
+	font-size: 1.3rem;
+}
+
+.FooterFontSize{
+	font-size: 1.6rem;
+}
+
+.fontSicon1{
+	font-size: 1.8rem;
+}
+
+.fontSicon2{
+	font-size: 7rem;
+}
+
+.fontSIcon4{
+	font-size: 1.3rem;
+}
+
+/*FontSize*/
+
+/*colors:*/
+.textColor1{
+	color: #000;
+}
+
+.textColor2{
+	color: #fff;
+}
+
+
+.textblack{
+	color: #000;
+}
+
+.textred{
+	color: var(--color_red1);
+}
+.textgreen{
+	color: var(--color_green1);
+}
+
+
+
+.borderRadBut{
+	border-radius: 50%;
+}
+
+.lineH50{
+	line-height: 50%;
+}
+
+.btn-align-mid {
+    vertical-align: baseline;
+}
+
+.colorDot{
+	color: rgba(50, 196, 120, 1)
+}
+
+.backItems {
+	background-color: rgb(77, 106, 255);
+}
+
+.backPry{
+	background-color: rgb(0,0,0);
+}
+/*colors:*/
+
+/*
+style={{ transform: `translateY(-100%)` }}
+*/
+.topleft0 {
+	top: 0;
+	left: 0;
+}
+
+.botleft0 {
+	bottom: 0;
+	left: 0;
+}
+
+.right0 {
+	right: 0;
+}
+
+.maxHFooter{
+	max-height:10vh;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.desktopDNone{
+	display: none !important;
+}
+
+.hide {
+  visibility: hidden;
+  transition: all 1s ease-out;
+  opacity: 0;  
+}
+
+.widthPresentacion {
+  width: 65%;
+}
+
+.presTitleSize1{
+	font-size: 1.3rem;
+}
+
+.presContentSize1{
+	font-size: 1.5rem;
+}
+
+/*Detect Mobile:
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and ( max-width: 2000px),
+only screen and (   min--moz-device-pixel-ratio: 2) and ( max-width: 2000px),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and ( max-width: 2000px),
+only screen and (        min-device-pixel-ratio: 2) and ( max-width: 2000px),
+only screen and (                min-resolution: 192dpi) and ( max-width: 2000px),
+only screen and (                min-resolution: 2dppx) and ( max-width: 2000px) { 
+*/
+/*
+original:
+
+@media only screen and (hover: none) and (pointer: coarse){
+*/
+
+@media only screen and (hover: none) and (pointer: coarse),
+only screen and (                min-resolution: 192dpi) and ( max-width: 2000px),
+only screen and (                min-resolution: 2dppx) and ( max-width: 2000px) { 
+	#divMobileDetector { display: none; }
+	/* Regular CSS rules here*/
+	
+	.fontSize1{
+		font-size: 1.5rem;
+	}
+	
+	.fontSicon1{
+		font-size: 1.4rem;
+	}
+	
+	.presTitleSize1{
+		font-size: 1.1rem;
+	}
+	
+	.presContentSize1{
+		font-size: 1.2rem;
+	}
+	
+	.mobileDNone{
+		display: none !important;
+	}
+	.desktopDNone{
+		display: block !important;
+	}
+	.widthPresentacion {
+	  width: 92%;
+	}
+}
