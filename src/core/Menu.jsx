@@ -79,7 +79,7 @@ const Menu = () => {
 			<div className="d-flex align-items-center mypy-3 w-100 backPry">
 				<div className="d-flex align-items-center w-100">
 					<div className="" style={{ width: "13%" }}></div>
-					<h1 className=""> <strong className="textColor2 noselect fontSize1 ">Agustin Caliva - AgCaliva</strong> </h1>
+					<h1 className="" style={{ fontSize: "2.1rem" }}> <strong className="textColor2 noselect">Agustin Caliva - AgCaliva</strong> </h1>
 				</div>
 				<div className="d-flex justify-content-end align-items-center w-100">
 					<button id="menuBut" name="menuEl" type="button" className="btn btn-1 mx-3" aria-label="Open Menu" onClick={clickMenuBut}>

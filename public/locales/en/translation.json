@@ -1,0 +1,68 @@
+{
+  "about_me": "About me:",
+  "about_me_section": {
+    "1": "Cloud",
+    "2": "Enhanced Security",
+    "3": "Trustworthy",
+  },
+  "prog_langs_section": {
+    "1": "Programming Languages:",
+    "2": "Treechart",
+    "3": "Piechart",
+  },
+  "projects": "Projects:",
+  "info_section_1": {
+    "1": "TransUnion ID Detection",
+    "2": "Developed an app from scratch, integrating third-party APIs to enable real-time ID detection via camera. Utilized OpenCV to accurately detect and process ID documents, as shown in this screenshot capturing the verification process.",
+  },
+  "info_section_2": {
+    "1": "TransUnion Selfie Face Detection",
+    "2": "Designed a selfie capture screen for an Android app, utilizing native Android functions to implement real-time face detection. This feature ensures accurate facial recognition for user verification, as demonstrated in the screenshot.",
+  },
+  "info_section_3_4": {
+    "1": "Cinemark API Maintenance & Implementation",
+    "2": "Maintained and implemented several APIs into an Android application, enhancing its functionality and performance. This project showcased my ability to work with existing systems and optimize app connectivity.",
+  },
+  "info_section_5": {
+    "1": "Live Video streaming API",
+    "2": "Developed a custom live video streaming API optimized for performance, leveraging a combination of codecs, quality settings, and compression techniques. The solution supported over 20 simultaneous live streams, each offering three selectable quality channels (1080p, 720p, 360p), while utilizing cost-efficient resources. Videos were stored in MongoDB for on-demand playback. This MVP showcases the API running on a mobile device.",
+  },
+  "info_section_6": {
+    "1": "Video Edge Detection with OpenCV",
+    "2": "Implemented a video processing feature using OpenCV and custom image algorithms in Python, enabling edge detection with enhanced color contrast. This screenshot demonstrates the technique applied to video frames.",
+  },
+  "services_section": {
+    "1": "Services:",
+    "2": "Convert your AI MVP into a scalable final product",
+    "3": "Optimize your software to save on API service costs",
+    "4": "Enhance the cryptography/security in your SaaS",
+    "5": "And a lot more!",
+  },
+  "services_section_1": {
+    "1": "Android Apps",
+    "2": "Camera native apps",
+    "3": "Deploying",
+    "4": "Kotlin",
+  },
+  "services_section_2": {
+    "1": "Web Development",
+    "2": "ReactJS",
+    "3": "NodeJS",
+    "4": "CSS",
+  },
+  "services_section_3": {
+    "1": "Web Scraping",
+    "2": "All methods",
+    "3": "(textOnly, Selenium, GuiBot like)",
+    "4": "Custom Scrapers",
+    "5": "Data",
+  },
+  "services_section_4": {
+    "1": "Server Configuration",
+    "2": "Linux",
+    "3": "Bash Scripting",
+    "4": "Database deploy",
+  },
+  "contact": "Contact:",
+  "clientsAndContrib": "Clients and Contributions:"
+}

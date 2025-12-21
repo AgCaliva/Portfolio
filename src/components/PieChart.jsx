@@ -36,12 +36,15 @@ function vwToPx(vw) {
   return (window.innerWidth * vw) / 100;
 }
 export default function PieChart(){
-	
+	const w = useRef(0);
+	const h = useRef(0);
 	useEffect(() => {
 	}, []);
 	
 	useLayoutEffect(() => {
 		const pieLanguages = window.$("#pie-languages")
+		const donut = window.$("#donut")
+		
 		let is_mobile = false;
 		const divMobileDetector = window.$('#divMobileDetector')
 		if( divMobileDetector.css('display')==='none') {
@@ -49,14 +52,16 @@ export default function PieChart(){
 		}
 		if(is_mobile){
 			pieLanguages.width( vwToPx(100) )
+			//pieLanguages.height( vwToPx(100) + 1 )
 		}else{
 			pieLanguages.width( vwToPx(45) )
+			pieLanguages.height( vwToPx(45) + 100 )
 		}
 	}, [])
 	
 	return(
-	<div id="pie-languages" style={{width:"45vw"}}>
-		<Doughnut data={data}/>
+	<div id="pie-languages" className="d-none" style={{width:"45vw"}}>
+		<Doughnut id="donut" data={data} options={{ maintainAspectRatio: false }}/>
 	</div>
 	);
 }
