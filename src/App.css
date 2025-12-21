@@ -13,6 +13,9 @@
 /*
 rgba(50, 196, 120, 0.75)
 Modificando Bootstrap:*/
+p{
+  margin:0px !important;  
+}
 h1{
   margin-top:0px !important;
   margin-bottom:0px !important;

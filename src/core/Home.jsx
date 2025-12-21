@@ -2,14 +2,23 @@ import React, { useEffect, useState, useRef} from 'react'
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
 import fscreen from 'fscreen';
+
+import Treechart from '../components/Treechart'
+import PieChart from '../components/PieChart'
+
 
 export default function Home(){
 	const itemFullScreen6 = useRef();
 	const itemFullScreen7 = useRef();
 	const itemFullScreen8 = useRef();
 	const itemFullScreen9 = useRef();
+	
+	const [selectedOption, setSelectedOption] = useState('option1');
+
+	const handleChange = (event) => {
+		setSelectedOption(event.target.id);
+	};
 	
 	const clickClosePres = () => {
 		window.$('body,html').css('overflow','visible');
@@ -215,9 +224,9 @@ return (
 		
 		<div className='d-flex flex-row justify-content-center my-2 py-2 ' id="section_aboutme">
 			<div className='d-flex flex-column justify-content-center py-2 w-100 mobileDNone' >
-				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Android Developer</strong> </h1>
-				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Web Developer</strong> </h1>
-				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Python</strong> </h1>
+				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">SaaS</strong> </h1>
+				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Web3</strong> </h1>
+				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Dapps</strong> </h1>
 			</div>
 			
 			<div className='d-flex flex-column py-2' >
@@ -233,19 +242,19 @@ return (
 			</div>
 
 			<div className='d-flex flex-column justify-content-center py-2 w-100 mobileDNone' >
-				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">C++</strong> </h1>
-				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Web Scraping </strong> </h1>
-				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Linux</strong> </h1>
+				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Cloud</strong> </h1>
+				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Enhanced Security</strong> </h1>
+				<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Trustworthy</strong> </h1>
 			</div>
 			
 			<div className="desktopDNone">
 				<div className='d-flex flex-column justify-content-center w-100' >
-					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Android Developer</strong> </h1>
-					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Web Developer</strong> </h1>
-					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Python</strong> </h1>
-					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">C++</strong> </h1>
-					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Web Scraping </strong> </h1>
-					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Linux</strong> </h1>
+					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">SaaS</strong> </h1>
+					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Web3</strong> </h1>
+					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Dapps</strong> </h1>
+					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Cloud</strong> </h1>
+					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Enhanced Security</strong> </h1>
+					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Trustworthy</strong> </h1>
 				</div>
 			</div>
 		</div>
@@ -475,6 +484,13 @@ return (
 		
 		<div className='d-flex flex-column justify-content-center my-2 py-2 ' id="section_services">
 			<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Services:</strong> </h1>
+			<div className="d-flex justify-content-center my-2">
+				<ul className="d-inline-block m-0">
+					<li className="textColor2"><strong className="noselect" style={{ color: "#fff", fontSize: "1.3rem" }}>Convert your AI MVP into a scalable final product</strong></li>
+					<li className="textColor2"><strong className="noselect" style={{ color: "#fff", fontSize: "1.3rem" }}>Optimize your software to save on API service costs</strong></li>
+					<li className="textColor2"><strong className="noselect" style={{ color: "#fff", fontSize: "1.3rem" }}>Enhance the cryptography/security in your SaaS</strong></li>
+				</ul>
+			</div>
 			<div id="serviciosItemsContainer" className="mt-4 py-2 d-flex justify-content-between">
 				<div className="mobileDNone" style={{ width: "9vw" }}></div>
 				<div id="serviciosItem1" className="d-flex flex-column">
@@ -527,7 +543,7 @@ return (
 					</div>
 					<div className="text-center py-2">
 						<strong className="" style={{ color: "#fff", fontSize: "1.3rem" }}>Web Scraping</strong>
-						<div className=" py-2">
+						<div className=" py-2">	
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
 								All methods
 							</p>
@@ -565,6 +581,20 @@ return (
 					</div>
 				</div>
 				<div className="mobileDNone" style={{ width: "9vw" }}></div>
+			</div>
+			<strong className="text-center" style={{ color: "#fff", fontSize: "1.3rem" }}>Programming languages:</strong>
+			<div id="programmingLanguagesContainer" className="mt-4 py-2 d-flex flex-column justify-content-center">
+				<div id="modesButs" className="ml-auto mr-4">
+					<input type="radio" className="btn-check invisible" name="options" id="option1" autoComplete="off" checked={selectedOption === 'option1'} onChange={handleChange}/>
+					<label className="btn btn-secondary" htmlFor="option1">Treechart</label>
+					<input type="radio" className="btn-check invisible" name="options" id="option2" autoComplete="off" checked={selectedOption === 'option2'} onChange={handleChange}/>
+					<label className="btn btn-secondary" htmlFor="option2">Piechart</label>
+				</div>
+				<div id="chart" className="d-flex flex-column align-items-center">
+					<PieChart/>
+					<Treechart/>
+					
+				</div>
 			</div>
 			<strong className="text-center" style={{ color: "#fff", fontSize: "1.3rem" }}>And a lot more!</strong>
 		

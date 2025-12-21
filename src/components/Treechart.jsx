@@ -1,0 +1,274 @@
+//import '../treant-js/Treant.js';
+//import '../treant-js/Treant.css';
+//import '../treant-js/vendor/raphael.js';
+import './Treant.css'
+import './LangTree.css'
+import { Treant } from 'treant-js'
+import Raphael from 'raphael';
+
+import { useEffect, useLayoutEffect, useRef } from "react";
+
+//let treant = window.Treant;
+window.Raphael = Raphael;
+
+export default function Treechart(){
+	let treant = undefined
+	// Sample data
+	
+	const simple_chart_config = {
+		chart: {
+			container: "#tree-languages",
+			levelSeparation:    200,//change this for phones
+			siblingSeparation:  10,
+			subTeeSeparation:   3,
+			rootOrientation: "WEST",
+			node: {
+				HTMLclass: "langtree",
+				drawLineThrough: false
+			},
+			connectors: {
+				//type: "straight",
+				style: {
+					"stroke-width": 2,
+					"stroke": "#ccc"
+				}
+			}
+		},
+		
+		nodeStructure: {
+			HTMLclass: "node1",
+			text: { name: "AgCaliva" },
+			
+			children: [
+				{
+					text: { name: "Python"},
+					children: [
+						{
+							text: { name: "requests"},
+						},
+						{
+							text: { name: "numpy" }
+						},
+						{
+							text: { name: "pandas" }
+						},
+						{
+							text: { name: "matplotlib" }
+						},
+						{
+							text: { name: "opencv-python" }
+						},
+						/*ML
+						{
+							text: { name: "scikit-learn" }
+						},
+						{
+							text: { name: "tensorflow" }
+						},
+						{
+							text: { name: "torch" }
+						}*/
+						/*WEBDEV
+						{
+							text: { name: "flask" }
+						},
+						{
+							text: { name: "django" }
+						},
+						{
+							text: { name: "fastapi" }
+						},
+						*/
+						{
+							text: { name: "beautifulsoup4" }
+						},
+						{
+							text: { name: "pytest" }
+						},
+						{
+							text: { name: "sqlalchemy" }
+						},
+						{
+							text: { name: "PyMongo" }
+						},
+						{
+							text: { name: "pillow" }
+						},
+					]
+				},
+				{
+					text: { name: "C/C++" },
+					children: [
+						{
+							text: { name: "pthreads" }
+						},
+						{
+							text: { name: "ncurses" }
+						},
+						{
+							text: { name: "libcurl" }
+						},
+						{
+							text: { name: "Qt"},
+						},
+						{
+							text: { name: "OpenCV" }
+						},
+						{
+							text: { name: "spdlog" }
+						},
+						{
+							text: { name: "Boost" }
+						},
+						{
+							text: { name: "FFmpeg" }
+						},
+					]
+				},
+				{
+					text: { name: "Java/Kotlin" },
+					children: [
+						/*WEBDEV
+						{
+							text: { name: "Spring" }
+						},
+						*/
+						{
+							text: { name: "JUnit" }
+						},
+						{
+							text: { name: "Jackson/Gson" }
+						},
+						{
+							text: { name: "Apache Maven"},
+						},
+						{
+							text: { name: "AndroidX/Jetpack" }
+						},
+						{
+							text: { name: "Glide" }
+						},
+						{
+							text: { name: "Coroutines" }
+						},
+					]
+				},
+				{
+					text: { name: "Javascript" },
+					children: [
+						/*WEBDEV
+						{
+							text: { name: "Vue.js" }
+						},
+						{
+							text: { name: "TypeScript" }
+						},
+						
+						*/
+						{
+							text: { name: "React" }
+						},
+						{
+							text: { name: "Node.js" }
+						},
+						{
+							text: { name: "Lodash"},
+						},
+						{
+							text: { name: "jQuery" }
+						},
+						{
+							text: { name: "Axios" }
+						},
+						{
+							text: { name: "Webpack" }
+						},
+						{
+							text: { name: "Jest" }
+						},
+					]
+				},
+				{
+					text: { name: "Golang" },
+					children: [
+						{
+							text: { name: "jwt-go" }
+						},
+						{
+							text: { name: "go-redis" }
+						},
+						{
+							text: { name: "sqlx"},
+						},
+						{
+							text: { name: "testify" }
+						},
+					]
+				},
+				{
+					text: { name: "Scripting/Bash" },
+					children: [
+						{
+							text: { name: "pipelines/redirection" }
+						},
+						{
+							text: { name: "awk" }
+						},
+						{
+							text: { name: "sed"},
+						},
+						{
+							text: { name: "find" }
+						},
+						{
+							text: { name: "docker" }
+						},
+						{
+							text: { name: "nginx" }
+						},
+					]
+				},
+				{
+					text: { name: "Ruby" }
+				}
+			]
+		}
+	};
+	function vwToPx(vw) {
+		return (window.innerWidth * vw) / 100;
+	}
+	
+	useEffect(() => {
+		let is_mobile = false;
+		const divMobileDetector = window.$('#divMobileDetector')
+		if( divMobileDetector.css('display')==='none') {
+			is_mobile = true
+		}
+		if(is_mobile){
+			simple_chart_config.chart.levelSeparation = vwToPx(8)//35
+		}else{
+			simple_chart_config.chart.levelSeparation = vwToPx(27)
+		}
+		
+		//var my_chart = new Treant(simple_chart_config);
+		if (treant) {
+			treant.destroy();
+		}
+		treant = new Treant(simple_chart_config)
+	}, []);
+	
+	useLayoutEffect(() => {
+		
+		
+		const treeLanguages = window.$("#tree-languages")
+		const svg = treeLanguages.find("svg") //window.$("#tree-languages > svg")
+		treeLanguages.height( svg.outerHeight() );
+		
+	}, [])
+	
+	return (
+	<div id="tree-languages" className="" style={{height:"0px", width:"100%"}}>
+	</div>
+	)
+	
+}
