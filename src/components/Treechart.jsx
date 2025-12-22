@@ -134,7 +134,7 @@ export default function Treechart(){
 							text: { name: "Gson" }
 						},
 						{
-							text: { name: "Apache Maven"},
+							text: { name: "Maven"},
 						},
 						{
 							text: { name: "AndroidX" }
@@ -186,10 +186,10 @@ export default function Treechart(){
 					text: { name: "Golang" },
 					children: [
 						{
-							text: { name: "jwt-go" }
+							text: { name: "jwt" }
 						},
 						{
-							text: { name: "go-redis" }
+							text: { name: "redis" }
 						},
 						{
 							text: { name: "sqlx"},
