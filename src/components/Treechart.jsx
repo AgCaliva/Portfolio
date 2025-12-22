@@ -50,7 +50,7 @@ export default function Treechart(){
 							text: { name: "matplotlib" }
 						},
 						{
-							text: { name: "opencv-python" }
+							text: { name: "opencv" }
 						},
 						/*ML
 						{
@@ -131,13 +131,13 @@ export default function Treechart(){
 							text: { name: "JUnit" }
 						},
 						{
-							text: { name: "Jackson/Gson" }
+							text: { name: "Gson" }
 						},
 						{
 							text: { name: "Apache Maven"},
 						},
 						{
-							text: { name: "AndroidX/Jetpack" }
+							text: { name: "AndroidX" }
 						},
 						{
 							text: { name: "Glide" }
@@ -243,8 +243,8 @@ export default function Treechart(){
 			is_mobile = true
 		}
 		if(is_mobile){
-			simple_chart_config.chart.levelSeparation = vwToPx(4)//35
-			simple_chart_config.chart.subTeeSeparation = 0
+			simple_chart_config.chart.levelSeparation = vwToPx(10)//35
+			//simple_chart_config.chart.subTeeSeparation = 0
 			
 		}else{
 			simple_chart_config.chart.levelSeparation = vwToPx(27)
