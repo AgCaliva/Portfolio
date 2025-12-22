@@ -1,6 +1,3 @@
-//import '../treant-js/Treant.js';
-//import '../treant-js/Treant.css';
-//import '../treant-js/vendor/raphael.js';
 import './Treant.css'
 import './LangTree.css'
 import { Treant } from 'treant-js'
@@ -254,7 +251,11 @@ export default function Treechart(){
 		if (treant) {
 			treant.destroy();
 		}
+		console.log("Treant")
+		console.dir(Treant)
 		treant = new Treant(simple_chart_config)
+		console.log("treant")
+		console.dir(treant)
 	}, []);
 	
 	useLayoutEffect(() => {
