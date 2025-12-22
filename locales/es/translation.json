@@ -1,0 +1,79 @@
+{
+  "menu_section": {
+    "1": "Sobre Mi",
+    "2": "Proyectos 1",
+    "3": "Proyectos 2",
+    "4": "Servicios",
+    "5": "Contacto",
+    "6": "Clientes"
+  },
+  "about_me": "Sobre Mi:",
+  "about_me_section": {
+    "1": "Nube",
+    "2": "Seguridad mejorada",
+    "3": "Confiable"
+  },
+  "prog_langs_section": {
+    "1": "Lenguages de Programación:",
+    "2": "Diagrama de árbol",
+    "3": "Diagrama de pastel"
+  },
+  "projects": "Proyectos:",
+  "info_section_1": {
+    "1": "TransUnion Deteccion de ID",
+    "2": "Desarrollé una aplicación desde cero, integrando APIs de terceros para habilitar la detección de ID en tiempo real mediante la cámara. Utilicé OpenCV para detectar y procesar documentos de identidad con precisión, como se muestra en esta captura de pantalla que captura el proceso de verificación."
+  },
+  "info_section_2": {
+    "1": "TransUnion Deteccion de rostros",
+    "2": "Diseñé una pantalla de captura de selfie para una aplicación Android, utilizando funciones nativas de Android para implementar la detección de rostro en tiempo real. Esta característica asegura un reconocimiento facial preciso para la verificación del usuario, como se demuestra en la captura de pantalla."
+  },
+  "info_section_3_4": {
+    "1": "Cinemark API Mantenimiento & Implementación",
+    "2": "Mantuve e implementé varias APIs en una aplicación Android, mejorando su funcionalidad y rendimiento. Este proyecto demostró mi capacidad para trabajar con sistemas existentes y optimizar la conectividad de la app."
+  },
+  "info_section_5": {
+    "1": "Streaming de video en vivo",
+    "2": "Desarrollé una API personalizada de streaming de video en vivo optimizada para rendimiento, aprovechando una combinación de códecs, configuraciones de calidad y técnicas de compresión. La solución soportaba más de 20 streams en vivo simultáneos, cada uno con tres canales de calidad seleccionables (1080p, 720p, 360p), mientras utilizaba recursos de muy bajo costo. Los videos se almacenaban en MongoDB para reproducción bajo demanda. Esta demo/MVP muestra la API ejecutándose en un dispositivo móvil."
+  },
+  "info_section_6": {
+    "1": "Detección de bordes en video con OpenCV",
+    "2": "Implementé una función de procesamiento de video usando OpenCV y algoritmos personalizados de imagen en Python, permitiendo la detección de bordes con contraste de color mejorado. Esta captura de pantalla demuestra la técnica aplicada a fotogramas de video."
+  },
+  "services_section": {
+    "1": "Servicios:",
+    "2": "Convierte tu MVP de IA en un producto final escalable",
+    "3": "Optimiza tu software para ahorrar en costos de servicios de API",
+    "4": "Mejora la criptografía/seguridad en tu SaaS",
+    "5": "¡Y mucho más!"
+  },
+  "services_section_1": {
+    "1": "Android Apps",
+    "2": "Camera native apps",
+    "3": "Deploying",
+    "4": "Kotlin"
+  },
+  "services_section_2": {
+    "1": "Desarrollo Web Full Stack",
+    "2": "ReactJS",
+    "3": "NodeJS",
+    "4": "CSS"
+  },
+  "services_section_3": {
+    "1": "Web Scraping",
+    "2": "Todos los metodos existentes:",
+    "3": "(textOnly, Selenium, GuiBot like)",
+    "4": "Custom Scrapers",
+    "5": "Recopilar datos"
+  },
+  "services_section_4": {
+    "1": "Configuracion de Server privado",
+    "2": "Linux",
+    "3": "Bash Scripting",
+    "4": "Configuracion de Base de datos"
+  },
+  "contact": "Contacto:",
+  "clientsAndContrib": "Clientes y Contribuciones:",
+  "piechart_section": {
+    "1": " % de Uso"
+  }
+}
