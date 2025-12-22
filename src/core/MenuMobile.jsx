@@ -1,7 +1,9 @@
 import React, { useEffect, useRef} from 'react'
 import {Link} from 'react-router'
+import { useTranslation } from 'react-i18next';
 
 const MenuMobile = () => {
+	const { t, i18n } = useTranslation();
 	const closeMenu = () => {
 		const menuBut = window.$("#menuBut");
 		const MenuButs = window.$("#MenuButs");
@@ -83,22 +85,22 @@ const MenuMobile = () => {
 					</button>
 				</a>
 				<button id="aboutmeBut" name="menuEl" type="button" className="btn btn-1 fontSicon1" aria-label="Open Menu" onClick={clickAboutMe}>
-					About Me
+					{ t('menu_section.1') }
 				</button>
 				<button id="samples1But" name="menuEl" type="button" className="btn btn-1 fontSicon1" aria-label="Open Menu" onClick={clickSamples1}>
-					Projects 1
+					{ t('menu_section.2') }
 				</button>
 				<button id="samples2But" name="menuEl" type="button" className="btn btn-1 fontSicon1" aria-label="Open Menu" onClick={clickSamples2}>
-					Projects 2
+					{ t('menu_section.3') }
 				</button>
 				<button id="servicesBut" name="menuEl" type="button" className="btn btn-1 fontSicon1" aria-label="Open Menu" onClick={clickServices}>
-					Services
+					{ t('menu_section.4') }
 				</button>
 				<button id="contactBut" name="menuEl" type="button" className="btn btn-1 fontSicon1" aria-label="Open Menu" onClick={clickContact}>
-					Contact
+					{ t('menu_section.5') }
 				</button>
 				<button id="clientsBut" name="menuEl" type="button" className="btn btn-1 fontSicon1" aria-label="Open Menu" onClick={clickClients}>
-					Clients
+					{ t('menu_section.6') }
 				</button>
 			</div>
 		</div>

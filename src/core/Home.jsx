@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef} from 'react'
+import { useTranslation } from 'react-i18next';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -9,6 +10,7 @@ import PieChart from '../components/PieChart'
 
 
 export default function Home(){
+	const { t, i18n } = useTranslation();
 	const itemFullScreen6 = useRef();
 	const itemFullScreen7 = useRef();
 	const itemFullScreen8 = useRef();
@@ -18,7 +20,6 @@ export default function Home(){
 
 	const handleChange = (event) => {
 		setSelectedOption(event.target.id);
-		console.log("event.target.id "+event.target.id)
 		const pieLanguages = window.$("#pie-languages")
 		const treeLanguages = window.$("#tree-languages")
 		if(event.target.id === "option1"){//treechart
@@ -28,7 +29,6 @@ export default function Home(){
 			pieLanguages.removeClass("d-none")
 			treeLanguages.addClass("d-none")
 		}
-		
 	};
 	
 	const clickClosePres = () => {
@@ -54,9 +54,9 @@ export default function Home(){
 		const presentacionContainer = window.$("#presentacionContainer");
 		presentacionContainer.removeClass("hide")
 		const presTitle = window.$("#presTitle");
-		presTitle.text("TransUnion ID Detection")
+		presTitle.text( t('info_section_1.1') )
 		const presContent = window.$("#presContent");
-		presContent.html("Developed an app from scratch, integrating third-party APIs to enable real-time ID detection via camera. Utilized OpenCV to accurately detect and process ID documents, as shown in this screenshot capturing the verification process.")
+		presContent.html( t('info_section_1.2') )
 		presentacionContainer.show()
 	}
 	
@@ -66,9 +66,9 @@ export default function Home(){
 		const presentacionContainer = window.$("#presentacionContainer");
 		presentacionContainer.removeClass("hide")
 		const presTitle = window.$("#presTitle");
-		presTitle.text("TransUnion Selfie Face Detection")
+		presTitle.text( t('info_section_2.1') )
 		const presContent = window.$("#presContent");
-		presContent.html("Designed a selfie capture screen for an Android app, utilizing native Android functions to implement real-time face detection. This feature ensures accurate facial recognition for user verification, as demonstrated in the screenshot.")
+		presContent.html(t('info_section_2.2'))
 		presentacionContainer.show()
 	}
 	
@@ -78,9 +78,9 @@ export default function Home(){
 		const presentacionContainer = window.$("#presentacionContainer");
 		presentacionContainer.removeClass("hide")
 		const presTitle = window.$("#presTitle");
-		presTitle.text("Cinemark API Maintenance & Integration")
+		presTitle.text( t('info_section_3_4.1') )
 		const presContent = window.$("#presContent");
-		presContent.html("Maintained and integrated several APIs into an Android application, enhancing its functionality and performance. This project showcased my ability to work with existing systems and optimize app connectivity.")
+		presContent.html( t('info_section_3_4.2') )
 		presentacionContainer.show()
 	}
 	
@@ -90,9 +90,9 @@ export default function Home(){
 		const presentacionContainer = window.$("#presentacionContainer");
 		presentacionContainer.removeClass("hide")
 		const presTitle = window.$("#presTitle");
-		presTitle.text("Cinemark API Maintenance & Integration")
+		presTitle.text( t('info_section_3_4.1') )
 		const presContent = window.$("#presContent");
-		presContent.html("Maintained and integrated several APIs into an Android application, enhancing its functionality and performance. This project showcased my ability to work with existing systems and optimize app connectivity.")
+		presContent.html( t('info_section_3_4.2') )
 		presentacionContainer.show()
 	}
 	
@@ -102,9 +102,9 @@ export default function Home(){
 		const presentacionContainer = window.$("#presentacionContainer");
 		presentacionContainer.removeClass("hide")
 		const presTitle = window.$("#presTitle");
-		presTitle.text("Live Video streaming API")
+		presTitle.text( t('info_section_5.1') )
 		const presContent = window.$("#presContent");
-		presContent.html("Developed a custom live video streaming API optimized for performance, leveraging a combination of codecs, quality settings, and compression techniques. The solution supported over 20 simultaneous live streams, each offering three selectable quality channels (1080p, 720p, 360p), while utilizing cost-efficient resources. Videos were stored in MongoDB for on-demand playback. This demo showcases the API running on a mobile device.")
+		presContent.html( t('info_section_5.2') )
 		presentacionContainer.show()
 	}
 	
@@ -114,9 +114,9 @@ export default function Home(){
 		const presentacionContainer = window.$("#presentacionContainer");
 		presentacionContainer.removeClass("hide")
 		const presTitle = window.$("#presTitle");
-		presTitle.text("Video Edge Detection with OpenCV")
+		presTitle.text( t('info_section_6.1') )
 		const presContent = window.$("#presContent");
-		presContent.html("Implemented a video processing feature using OpenCV and custom image algorithms in Python, enabling edge detection with enhanced color contrast. This screenshot demonstrates the technique applied to video frames.")
+		presContent.html( t('info_section_6.2') )
 		presentacionContainer.show()
 	}
 	
@@ -241,7 +241,7 @@ return (
 			</div>
 			
 			<div className='d-flex flex-column py-2' >
-				<h1 className="text-center my-2" style={{ fontSize: "2.2rem" }}> <strong className="textColor2 noselect ">About Me:</strong> </h1>
+				<h1 className="text-center my-2" style={{ fontSize: "2.2rem" }}> <strong className="textColor2 noselect ">{ t('about_me') }</strong> </h1>
 				<div className="mx-auto"  style={{  }}>
 					<div className="mobileDNone " id="fondoPerfil" style={{ width: '25vw' }}>
 						<img src={import.meta.env.BASE_URL+'/AgCalivaProfile.png'} className="img-fluid w-100 h-100 borderRadBut" alt="ProfilePic"/>
@@ -253,9 +253,9 @@ return (
 			</div>
 
 			<div className='d-flex flex-column justify-content-center py-2 w-100 mobileDNone' >
-				<h1 className="text-center my-2" style={{ fontSize: "2rem" }}> <strong className="textColor2 noselect  ">Cloud</strong> </h1>
-				<h1 className="text-center my-2" style={{ fontSize: "2rem" }}> <strong className="textColor2 noselect fontSize1 ">Enhanced Security</strong> </h1>
-				<h1 className="text-center my-2" style={{ fontSize: "2rem" }}> <strong className="textColor2 noselect ">Trustworthy</strong> </h1>
+				<h1 className="text-center my-2" style={{ fontSize: "2rem" }}> <strong className="textColor2 noselect  ">{ t('about_me_section.1') }</strong> </h1>
+				<h1 className="text-center my-2" style={{ fontSize: "2rem" }}> <strong className="textColor2 noselect fontSize1 ">{ t('about_me_section.2') }</strong> </h1>
+				<h1 className="text-center my-2" style={{ fontSize: "2rem" }}> <strong className="textColor2 noselect ">{ t('about_me_section.3') }</strong> </h1>
 			</div>
 			
 			<div className="desktopDNone">
@@ -263,20 +263,20 @@ return (
 					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">SaaS</strong> </h1>
 					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Web3</strong> </h1>
 					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Dapps</strong> </h1>
-					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Cloud</strong> </h1>
-					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Enhanced Security</strong> </h1>
-					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">Trustworthy</strong> </h1>
+					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">{ t('about_me_section.1') }</strong> </h1>
+					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">{ t('about_me_section.2') }</strong> </h1>
+					<h1 className="mx-auto"> <strong className="textColor2 noselect fontSize1 ">{ t('about_me_section.3') }</strong> </h1>
 				</div>
 			</div>
 		</div>
 		
-		<strong className="text-center my-2" style={{ color: "#fff", fontSize: "1.4rem" }}>Programming languages:</strong>
+		<strong className="text-center my-2" style={{ color: "#fff", fontSize: "1.4rem" }}>{ t('prog_langs_section.1') }</strong>
 		<div id="programmingLanguagesContainer" className="mt-4 py-2 d-flex flex-column justify-content-center">
 			<div id="modesButs" className="ml-auto mr-4">
 				<input type="radio" className="btn-check invisible" name="options" id="option1" autoComplete="off" checked={selectedOption === 'option1'} onChange={handleChange}/>
-				<label className="btn btn-secondary" htmlFor="option1">Treechart</label>
+				<label className="btn btn-secondary" htmlFor="option1">{ t('prog_langs_section.2') }</label>
 				<input type="radio" className="btn-check invisible" name="options" id="option2" autoComplete="off" checked={selectedOption === 'option2'} onChange={handleChange}/>
-				<label className="btn btn-secondary" htmlFor="option2">Piechart</label>
+				<label className="btn btn-secondary" htmlFor="option2">{ t('prog_langs_section.3') }</label>
 			</div>
 			<div id="chart" className="d-flex flex-column align-items-center">
 				<PieChart/>
@@ -285,7 +285,7 @@ return (
 		</div>
 		
 		<div className='d-flex flex-column my-2 py-2' id="section_samples1">
-			<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Projects:</strong> </h1>
+			<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">{ t('projects') }</strong> </h1>
 			<div className='my-2' id="section_samples1_container">
 			
 				<Carousel responsive={responsive}
@@ -508,12 +508,12 @@ return (
 		</div>
 		
 		<div className='d-flex flex-column justify-content-center my-2 py-2 ' id="section_services">
-			<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">Services:</strong> </h1>
+			<h1 className="mx-auto my-2"> <strong className="textColor2 noselect fontSize1 ">{ t('services_section.1') }</strong> </h1>
 			<div className="d-flex justify-content-center my-2">
 				<ul className="d-inline-block m-0">
-					<li className="textColor2"><strong className="noselect" style={{ color: "#fff", fontSize: "1.3rem" }}>Convert your AI MVP into a scalable final product</strong></li>
-					<li className="textColor2"><strong className="noselect" style={{ color: "#fff", fontSize: "1.3rem" }}>Optimize your software to save on API service costs</strong></li>
-					<li className="textColor2"><strong className="noselect" style={{ color: "#fff", fontSize: "1.3rem" }}>Enhance the cryptography/security in your SaaS</strong></li>
+					<li className="textColor2"><strong className="noselect" style={{ color: "#fff", fontSize: "1.3rem" }}>{ t('services_section.2') }</strong></li>
+					<li className="textColor2"><strong className="noselect" style={{ color: "#fff", fontSize: "1.3rem" }}>{ t('services_section.3') }</strong></li>
+					<li className="textColor2"><strong className="noselect" style={{ color: "#fff", fontSize: "1.3rem" }}>{ t('services_section.4') }</strong></li>
 				</ul>
 			</div>
 			<div id="serviciosItemsContainer" className="mt-4 py-2 d-flex justify-content-between">
@@ -525,16 +525,16 @@ return (
 						</div>
 					</div>
 					<div className="text-center py-2">
-						<strong className="" style={{ color: "#fff", fontSize: "1.3rem" }}>Android Apps</strong>
+						<strong className="" style={{ color: "#fff", fontSize: "1.3rem" }}>{ t('services_section_1.1') }</strong>
 						<div className="py-2">
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								Camera native apps
+								{ t('services_section_1.2') }
 							</p>
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								Deploying
+								{ t('services_section_1.3') }
 							</p>
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								Kotlin
+								{ t('services_section_1.4') }
 							</p>
 						</div>
 					</div>
@@ -546,16 +546,16 @@ return (
 						</div>
 					</div>
 					<div className="text-center py-2">
-						<strong className="" style={{ color: "#fff", fontSize: "1.3rem" }}>Web Development</strong>
+						<strong className="" style={{ color: "#fff", fontSize: "1.3rem" }}>{ t('services_section_2.1') }</strong>
 						<div className=" py-2">				
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								ReactJS
+								{ t('services_section_2.2') }
 							</p>
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								NodeJS
+								{ t('services_section_2.3') }
 							</p>
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								CSS
+								{ t('services_section_2.4') }
 							</p>
 						</div>
 					</div>
@@ -567,19 +567,19 @@ return (
 						</div>
 					</div>
 					<div className="text-center py-2">
-						<strong className="" style={{ color: "#fff", fontSize: "1.3rem" }}>Web Scraping</strong>
+						<strong className="" style={{ color: "#fff", fontSize: "1.3rem" }}>{ t('services_section_3.1') }</strong>
 						<div className=" py-2">	
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								All methods
+								{ t('services_section_3.2') }
 							</p>
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1rem" }}>
-								(textOnly, Selenium, GuiBot like)
+								{ t('services_section_3.3') }
 							</p>
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								Custom Scrapers
+								{ t('services_section_3.4') }
 							</p>
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								Data
+								{ t('services_section_3.5') }
 							</p>
 						</div>
 					</div>
@@ -591,16 +591,16 @@ return (
 						</div>
 					</div>
 					<div className="text-center py-2">
-						<strong className="" style={{ color: "#fff", fontSize: "1.3rem" }}>Server Configuration</strong>
+						<strong className="" style={{ color: "#fff", fontSize: "1.3rem" }}>{ t('services_section_4.1') }</strong>
 						<div className=" py-2">
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								Linux
+								{ t('services_section_4.2') }
 							</p>
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								Bash Scripting
+								{ t('services_section_4.3') }
 							</p>
 							<p className="text-center mb-0" style={{ color: "#fff", fontSize: "1.1rem" }}>
-								Database deploy
+								{ t('services_section_4.4') }
 							</p>
 						</div>
 					</div>
@@ -608,12 +608,12 @@ return (
 				<div className="mobileDNone" style={{ width: "9vw" }}></div>
 			</div>
 			
-			<strong className="text-center" style={{ color: "#fff", fontSize: "1.3rem" }}>And a lot more!</strong>
+			<strong className="text-center mb-2" style={{ color: "#fff", fontSize: "1.3rem" }}>{ t('services_section.5') }</strong>
 		
 		</div>
 		
 		<div className='d-flex flex-column justify-content-center my-2 py-2 ' id="section_contact">
-			<h1 className="text-center my-2"> <strong className="textColor2 noselect fontSize1 ">Contact:</strong> </h1>
+			<h1 className="text-center my-2"> <strong className="textColor2 noselect fontSize1 ">{ t('contact') }</strong> </h1>
 			
 			<div id="contactItemsContainer" className="d-flex pb-2 justify-content-between mt-4">
 				<div className="mobileDNone" style={{ width: "9vw" }}></div>
@@ -652,7 +652,7 @@ return (
 		</div>
 		
 		<div className='d-flex flex-column justify-content-center my-2 py-2 ' id="section_clients">
-			<h1 className="text-center my-2"> <strong className="textColor2 noselect fontSize1 ">Clients and Contributions:</strong> </h1>
+			<h1 className="text-center my-2"> <strong className="textColor2 noselect fontSize1 ">{ t('clientsAndContrib') }</strong> </h1>
 			<Carousel responsive={responsive}
 				ssr={true}
 				infinite={true}
