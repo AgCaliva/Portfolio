@@ -13,8 +13,8 @@ export default function Treechart(){
 		chart: {
 			container: "#tree-languages",
 			levelSeparation:    200,//change this for phones
-			siblingSeparation:  10,
-			subTeeSeparation:   3,
+			siblingSeparation:  0,
+			subTeeSeparation:   10,
 			rootOrientation: "WEST",
 			node: {
 				HTMLclass: "langtree",
@@ -243,7 +243,9 @@ export default function Treechart(){
 			is_mobile = true
 		}
 		if(is_mobile){
-			simple_chart_config.chart.levelSeparation = vwToPx(8)//35
+			simple_chart_config.chart.levelSeparation = vwToPx(4)//35
+			simple_chart_config.chart.subTeeSeparation = 0
+			
 		}else{
 			simple_chart_config.chart.levelSeparation = vwToPx(27)
 		}

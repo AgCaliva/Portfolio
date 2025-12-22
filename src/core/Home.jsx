@@ -169,6 +169,9 @@ export default function Home(){
 			section_aboutme.addClass("flex-column")
 			const serviciosItemsContainer = window.$('#serviciosItemsContainer')
 			serviciosItemsContainer.addClass("flex-column")
+			
+			//const modesButs = window.$('#modesButs')
+			
 		}else{
 			mobileDetectorDisplay.text("PC")
 		}
@@ -272,7 +275,7 @@ return (
 		
 		<strong className="text-center my-2" style={{ color: "#fff", fontSize: "1.4rem" }}>{ t('prog_langs_section.1') }</strong>
 		<div id="programmingLanguagesContainer" className="mt-4 py-2 d-flex flex-column justify-content-center">
-			<div id="modesButs" className="ml-auto mr-4">
+			<div id="modesButs" className="d-flex justify-content-center mx-2 ">
 				<input type="radio" className="btn-check invisible" name="options" id="option1" autoComplete="off" checked={selectedOption === 'option1'} onChange={handleChange}/>
 				<label className="btn btn-secondary" htmlFor="option1">{ t('prog_langs_section.2') }</label>
 				<input type="radio" className="btn-check invisible" name="options" id="option2" autoComplete="off" checked={selectedOption === 'option2'} onChange={handleChange}/>
