@@ -55,8 +55,8 @@ export default function PieChart(){
 			is_mobile = true
 		}
 		if(is_mobile){
-			pieLanguages.width( vwToPx(85) )
-			pieLanguages.height( vwToPx(85) + 10 )
+			pieLanguages.width( vwToPx(75) )
+			pieLanguages.height( vwToPx(75) + 10 )
 		}else{
 			pieLanguages.width( vwToPx(45) )
 			pieLanguages.height( vwToPx(45) + 100 )
