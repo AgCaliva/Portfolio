@@ -16,11 +16,11 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
   	backend: {
-		//loadPath: 'Portfolio/locales/{{lng}}/translation.json'
+		//loadPath: 'Portfolio/locales/{{lng}}/translation.json'//dev only
 		loadPath: 'locales/{{lng}}/translation.json'
     },
     fallbackLng: 'en',
-    debug: true,
+    //debug: true,
   });
 
 export default i18n;
