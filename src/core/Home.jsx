@@ -275,11 +275,15 @@ return (
 		
 		<strong className="text-center my-2" style={{ color: "#fff", fontSize: "1.4rem" }}>{ t('prog_langs_section.1') }</strong>
 		<div id="programmingLanguagesContainer" className="mt-4 py-2 d-flex flex-column justify-content-center">
-			<div id="modesButs" className="d-flex justify-content-center ">
-				<input type="radio" className="btn-check invisible" name="options" id="option1" autoComplete="off" checked={selectedOption === 'option1'} onChange={handleChange}/>
-				<label className="btn btn-secondary" htmlFor="option1">{ t('prog_langs_section.2') }</label>
-				<input type="radio" className="btn-check invisible" name="options" id="option2" autoComplete="off" checked={selectedOption === 'option2'} onChange={handleChange}/>
-				<label className="btn btn-secondary" htmlFor="option2">{ t('prog_langs_section.3') }</label>
+			<div id="modesButs" className="d-flex justify-content-center align-items-center">
+				<div className="ml-2">
+					<input type="radio" className="btn-check" name="options" id="option1" autoComplete="off" checked={selectedOption === 'option1'} onChange={handleChange} style={{ width: 0, height: 0 }}/>
+					<label className="btn btn-secondary mb-0" htmlFor="option1">{ t('prog_langs_section.2') }</label>
+				</div>
+				<div className="ml-2 mr-2">
+					<input type="radio" className="btn-check" name="options" id="option2" autoComplete="off" checked={selectedOption === 'option2'} onChange={handleChange} style={{ width: 0, height: 0 }}/>
+					<label className="btn btn-secondary mb-0" htmlFor="option2">{ t('prog_langs_section.3') }</label>
+				</div>
 			</div>
 			<div id="chart" className="d-flex flex-column align-items-center">
 				<PieChart/>
